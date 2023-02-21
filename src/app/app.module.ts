@@ -15,11 +15,17 @@ import {MatCardModule} from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { TarefasComponent } from './components/tarefas/tarefas.component';
+import { ProgressoComponent } from './components/progresso/progresso.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    TarefasComponent,
+    ProgressoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
