@@ -18,6 +18,12 @@ import {MatIconModule} from '@angular/material/icon';
 import { TarefasComponent } from './components/tarefas/tarefas.component';
 import { ProgressoComponent } from './components/progresso/progresso.component';
 import { HomeComponent } from './components/home/home.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
+import { TabelaComponent } from './components/tabela/tabela.component';
+import {MatSelectModule} from '@angular/material/select';
+
+
 
 @NgModule({
   declarations: [
@@ -25,7 +31,8 @@ import { HomeComponent } from './components/home/home.component';
     NavComponent,
     TarefasComponent,
     ProgressoComponent,
-    HomeComponent
+    HomeComponent,
+    TabelaComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,10 @@ import { HomeComponent } from './components/home/home.component';
     ReactiveFormsModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule,
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
