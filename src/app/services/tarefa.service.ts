@@ -10,8 +10,20 @@ export class TarefaService {
 
   constructor(private http: HttpClient) { }
 
-  findAll(): Observable<any[]>{
-    return this.http.get<any[]>('http://localhost:8080/task');
+  findAll(): Observable<Tarefa[]>{
+    return this.http.get<Tarefa[]>('http://localhost:8080/tarefas');
+  }
+
+  findAbertas(): Observable<Tarefa[]>{
+    return this.http.get<Tarefa[]>('http://localhost:8080/tarefas/abertas');
+  }
+
+  findAndamento(): Observable<Tarefa[]>{
+    return this.http.get<Tarefa[]>('http://localhost:8080/tarefas/andamento');
+  }
+
+  findFechadas(): Observable<Tarefa[]>{
+    return this.http.get<Tarefa[]>('http://localhost:8080/tarefas/fechadas');
   }
 
 }

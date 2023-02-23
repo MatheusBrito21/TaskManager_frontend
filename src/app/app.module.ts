@@ -21,6 +21,9 @@ import { HomeComponent } from './components/home/home.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
 import {MatSelectModule} from '@angular/material/select';
+import { TarefasListTodasComponent } from './listas/tarefas-list-todas/tarefas-list-todas.component';
+import { TarefasListAbertasComponent } from './listas/tarefas-list-abertas/tarefas-list-abertas.component';
+import { TarefasListFechadasComponent } from './listas/tarefas-list-fechadas/tarefas-list-fechadas.component';
 
 
 
@@ -30,7 +33,10 @@ import {MatSelectModule} from '@angular/material/select';
     NavComponent,
     TarefasComponent,
     ProgressoComponent,
-    HomeComponent
+    HomeComponent,
+    TarefasListTodasComponent,
+    TarefasListAbertasComponent,
+    TarefasListFechadasComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatIconModule,
     MatTabsModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

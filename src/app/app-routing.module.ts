@@ -4,11 +4,16 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ProgressoComponent } from './components/progresso/progresso.component';
 import { TarefasComponent } from './components/tarefas/tarefas.component';
+import { TarefasListAbertasComponent } from './listas/tarefas-list-abertas/tarefas-list-abertas.component';
+import { TarefasListTodasComponent } from './listas/tarefas-list-todas/tarefas-list-todas.component';
 
 const routes: Routes = [
   {path:'', component:NavComponent,children:[
     {path:'', component:HomeComponent},
-    {path:'tarefas', component:TarefasComponent},
+    {path:'tarefas', component:TarefasComponent, children:[
+      {path:'todas',component:TarefasListTodasComponent},
+      {path:'abertas',component:TarefasListAbertasComponent},
+    ]},
     {path:'progresso', component:ProgressoComponent}
   ]}
   
