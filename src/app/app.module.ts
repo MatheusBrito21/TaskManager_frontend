@@ -20,7 +20,6 @@ import { ProgressoComponent } from './components/progresso/progresso.component';
 import { HomeComponent } from './components/home/home.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
-import { TabelaComponent } from './components/tabela/tabela.component';
 import {MatSelectModule} from '@angular/material/select';
 
 
@@ -31,8 +30,7 @@ import {MatSelectModule} from '@angular/material/select';
     NavComponent,
     TarefasComponent,
     ProgressoComponent,
-    HomeComponent,
-    TabelaComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
