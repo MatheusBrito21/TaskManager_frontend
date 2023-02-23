@@ -11,7 +11,7 @@ import { TarefaService } from 'src/app/services/tarefa.service';
 export class TarefasListAbertasComponent {
   ELEMEMENT_DATA:Tarefa[] = []
 
-  displayedColumns: string[] = ['titulo', 'desc', 'dataIn', 'dataEnd','status'];
+  displayedColumns: string[] = ['titulo', 'desc', 'dataIn', 'dataEnd','status','acoes'];
   dataSource = new MatTableDataSource<Tarefa>(this.ELEMEMENT_DATA);
 
   

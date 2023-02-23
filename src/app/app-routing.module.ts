@@ -5,6 +5,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { ProgressoComponent } from './components/progresso/progresso.component';
 import { TarefasComponent } from './components/tarefas/tarefas.component';
 import { TarefasListAbertasComponent } from './listas/tarefas-list-abertas/tarefas-list-abertas.component';
+import { TarefasListFechadasComponent } from './listas/tarefas-list-fechadas/tarefas-list-fechadas.component';
 import { TarefasListTodasComponent } from './listas/tarefas-list-todas/tarefas-list-todas.component';
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
     {path:'tarefas', component:TarefasComponent, children:[
       {path:'todas',component:TarefasListTodasComponent},
       {path:'abertas',component:TarefasListAbertasComponent},
+      {path:'fechadas',component:TarefasListFechadasComponent},
     ]},
     {path:'progresso', component:ProgressoComponent}
   ]}
