@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Tarefa } from 'src/app/models/tarefa-model';
 import { TarefaService } from 'src/app/services/tarefa.service';
 
@@ -19,7 +21,11 @@ export class CriarTarefaComponent {
     status:'ABERTA'
   }
 
-  constructor(private service:TarefaService){}
+  constructor(
+    private service:TarefaService,
+    private route: ActivatedRoute,
+    private toast: ToastrService,
+    private router: Router){}
 
   titulo:FormControl = new FormControl(null,Validators.minLength(3));
   descricao: FormControl = new FormControl(null, Validators.maxLength(100))
@@ -28,7 +34,8 @@ export class CriarTarefaComponent {
 
   criarTarefa():void{
     this.service.create(this.tarefa).subscribe(resposta=>{
-      console.log('Tarefa cadastrada!')
+      this.toast.success('Tarefa criada com sucesso!','Nova tarefa.');
+      this.router.navigate(['tarefas/todas'])
     })
   }
 
