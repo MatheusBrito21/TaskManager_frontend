@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ProgressoComponent } from './components/progresso/progresso.component';
+import { AtualizarTarefaComponent } from './components/tarefas/atualizar-tarefa/atualizar-tarefa.component';
 import { CriarTarefaComponent } from './components/tarefas/criar-tarefa/criar-tarefa.component';
+import { DeletarTarefaComponent } from './components/tarefas/deletar-tarefa/deletar-tarefa.component';
 import { TarefasComponent } from './components/tarefas/tarefas.component';
 import { TarefasListAbertasComponent } from './listas/tarefas-list-abertas/tarefas-list-abertas.component';
 import { TarefasListFechadasComponent } from './listas/tarefas-list-fechadas/tarefas-list-fechadas.component';
@@ -16,9 +18,14 @@ const routes: Routes = [
       {path:'todas',component:TarefasListTodasComponent},
       {path:'abertas',component:TarefasListAbertasComponent},
       {path:'fechadas',component:TarefasListFechadasComponent},
-      {path:'criar',component:CriarTarefaComponent}
+      {path:'criar',component:CriarTarefaComponent},
+      {path:'todas/update/:id',component:AtualizarTarefaComponent},
+      {path:'todas/delete/:id',component:DeletarTarefaComponent},
+      {path:'fechadas/update/:id',component:AtualizarTarefaComponent},
+      {path:'abertas/update/:id',component:AtualizarTarefaComponent},
     ]},
     {path:'progresso', component:ProgressoComponent}
+
   ]}
   
 

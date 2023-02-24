@@ -30,16 +30,13 @@
       </ng-container>
 
       <ng-container matColumnDef="acoes">
-        <th mat-header-cell *matHeaderCellDef> Ações </th>
+        <th mat-header-cell *matHeaderCellDef> Atualizar </th>
         <td mat-cell *matCellDef="let element">
-          <a routerLink="">
+          <a routerLink="update/{{element.id}}">
             <i class="material-icons edit">edit</i>
           </a>
-          <a routerLink="">
-            <i class="material-icons close">close</i>
-          </a>
-          <a routerLink="">
-            <i class="material-icons delete">delete</i>
+          <a routerLink="delete/{{element.id}}">
+            <i class="material-icons edit">delete</i>
           </a>
         </td>
       </ng-container>

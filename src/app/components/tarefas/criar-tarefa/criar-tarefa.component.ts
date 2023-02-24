@@ -22,6 +22,7 @@ export class CriarTarefaComponent {
   constructor(private service:TarefaService){}
 
   titulo:FormControl = new FormControl(null,Validators.minLength(3));
+  descricao: FormControl = new FormControl(null, Validators.maxLength(100))
   dataInicio:FormControl = new FormControl(null,Validators.required);
   dataTermino:FormControl = new FormControl(null,Validators.required);
 
@@ -29,6 +30,10 @@ export class CriarTarefaComponent {
     this.service.create(this.tarefa).subscribe(resposta=>{
       console.log('Tarefa cadastrada!')
     })
+  }
+
+  validaCampos(): boolean{
+    return this.titulo.valid && this.dataInicio.valid && this.dataTermino.valid
   }
 }
 

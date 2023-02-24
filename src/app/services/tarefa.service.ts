@@ -13,7 +13,9 @@ export class TarefaService {
   findAll(): Observable<Tarefa[]>{
     return this.http.get<Tarefa[]>('http://localhost:8080/tarefas');
   }
-
+  findById(id:any): Observable<Tarefa>{
+    return this.http.get<Tarefa>(`http://localhost:8080/tarefas/${id}`);
+  }
   findAbertas(): Observable<Tarefa[]>{
     return this.http.get<Tarefa[]>('http://localhost:8080/tarefas/abertas');
   }
@@ -30,4 +32,13 @@ export class TarefaService {
     return this.http.post<Tarefa>('http://localhost:8080/tarefas',tarefa);
   }
 
+  update(tarefa:Tarefa):Observable<Tarefa>{
+    return this.http.put<Tarefa>(`http://localhost:8080/tarefas/update/${tarefa.id}`,tarefa)
+  }
+
+  delete(id:any):Observable<Tarefa>{
+    return this.http.delete<Tarefa>(`http://localhost:8080/tarefas/delete/${id}`)
+  }
+
+ 
 }

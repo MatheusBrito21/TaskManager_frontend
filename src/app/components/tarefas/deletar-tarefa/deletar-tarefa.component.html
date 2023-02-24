@@ -2,14 +2,14 @@
     <mat-card class="conteudo">
         <mat-card-content></mat-card-content>
         <form class="form-create">
-            <h1>Criar nova tarefa</h1>
+            <h1>Deletar tarefa</h1>
             <mat-form-field appearance="fill">
                 <mat-label>Titulo</mat-label>
-                <input matInput [(ngModel)]="tarefa.titulo" name="titulo" [formControl] = "titulo" required>
+                <input matInput [(ngModel)]="tarefa.titulo" name="titulo" [disabled]="true">
               </mat-form-field>
               <mat-form-field appearance="fill">
                 <mat-label>Descrição</mat-label>
-                <textarea matInput [(ngModel)]="tarefa.descricao" name="descricao"></textarea>
+                <textarea matInput [(ngModel)]="tarefa.descricao" name="descricao" [disabled]="true"></textarea>
               </mat-form-field>
               <mat-form-field appearance="fill">
                 <mat-label>Informe a data</mat-label>
@@ -18,19 +18,21 @@
                   matStartDate placeholder="Inicio" 
                   matInput [(ngModel)]="tarefa.dataInicio" 
                   name="dataInicio"
-                  [formControl] = "dataInicio" required>
+                  [disabled]="true"
+                  >
                   <input matEndDate placeholder="Fim" 
                   matInput [(ngModel)]="tarefa.dataTermino" 
                   name="dataTermino"
-                  [formControl] = "dataTermino" required>
+                  [disabled]="true"
+                  >
                 </mat-date-range-input>
                 <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-date-range-picker #picker></mat-date-range-picker>
               </mat-form-field>
 
-              <button mat-button (click)="criarTarefa()"[disabled]="!validaCampos()" color="primary">Criar</button>
-              <button mat-button color="accent">Cancelar</button>
+              <button mat-button (click)="delete()"color="primary">Deletar</button>
+              <button mat-button routerLink="../../" color="accent">Cancelar</button>
             
             </form>
     </mat-card>

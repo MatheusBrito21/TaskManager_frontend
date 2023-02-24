@@ -24,12 +24,15 @@ import {MatSelectModule} from '@angular/material/select';
 import { TarefasListTodasComponent } from './listas/tarefas-list-todas/tarefas-list-todas.component';
 import { TarefasListAbertasComponent } from './listas/tarefas-list-abertas/tarefas-list-abertas.component';
 import { TarefasListFechadasComponent } from './listas/tarefas-list-fechadas/tarefas-list-fechadas.component';
-import { TarefasListAndamentoComponent } from './listas/tarefas-list-andamento/tarefas-list-andamento.component';
 import { CriarTarefaComponent } from './components/tarefas/criar-tarefa/criar-tarefa.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core'; 
+import { MatNativeDateModule } from '@angular/material/core';
+import { AtualizarTarefaComponent } from './components/tarefas/atualizar-tarefa/atualizar-tarefa.component';
+import { DeletarTarefaComponent } from './components/tarefas/deletar-tarefa/deletar-tarefa.component';
+import {MatRadioModule} from '@angular/material/radio';
+ 
 
 
 
@@ -45,8 +48,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     TarefasListTodasComponent,
     TarefasListAbertasComponent,
     TarefasListFechadasComponent,
-    TarefasListAndamentoComponent,
     CriarTarefaComponent,
+    AtualizarTarefaComponent,
+    DeletarTarefaComponent,
    
   ],
   imports: [
@@ -66,6 +70,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatRadioModule,
 
     
   ],
