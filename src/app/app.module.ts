@@ -24,6 +24,13 @@ import {MatSelectModule} from '@angular/material/select';
 import { TarefasListTodasComponent } from './listas/tarefas-list-todas/tarefas-list-todas.component';
 import { TarefasListAbertasComponent } from './listas/tarefas-list-abertas/tarefas-list-abertas.component';
 import { TarefasListFechadasComponent } from './listas/tarefas-list-fechadas/tarefas-list-fechadas.component';
+import { TarefasListAndamentoComponent } from './listas/tarefas-list-andamento/tarefas-list-andamento.component';
+import { CriarTarefaComponent } from './components/tarefas/criar-tarefa/criar-tarefa.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core'; 
+
 
 
 
@@ -37,6 +44,9 @@ import { TarefasListFechadasComponent } from './listas/tarefas-list-fechadas/tar
     TarefasListTodasComponent,
     TarefasListAbertasComponent,
     TarefasListFechadasComponent,
+    TarefasListAndamentoComponent,
+    CriarTarefaComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -51,6 +61,10 @@ import { TarefasListFechadasComponent } from './listas/tarefas-list-fechadas/tar
     MatTabsModule,
     MatTableModule,
     MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     
   ],
   providers: [],

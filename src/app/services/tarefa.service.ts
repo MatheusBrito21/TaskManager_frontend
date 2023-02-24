@@ -26,4 +26,8 @@ export class TarefaService {
     return this.http.get<Tarefa[]>('http://localhost:8080/tarefas/fechadas');
   }
 
+  create(tarefa: Tarefa):Observable<Tarefa>{
+    return this.http.post<Tarefa>('http://localhost:8080/tarefas',tarefa);
+  }
+
 }

@@ -4,6 +4,6 @@ export interface Tarefa{
 	dataTermino:any,
 	titulo:string,
 	descricao:string,
-	status:string[]
+	status:string
   
 }

@@ -1,0 +1,31 @@
+<div class="container">
+    <mat-card class="conteudo">
+        <mat-card-content></mat-card-content>
+        <form class="form-create">
+            <h1>Criar nova tarefa</h1>
+            <mat-form-field appearance="fill">
+                <mat-label>Titulo</mat-label>
+                <input matInput [(ngModel)]="tarefa.titulo" name="titulo">
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Descrição</mat-label>
+                <textarea matInput [(ngModel)]="tarefa.descricao" name="descricao"></textarea>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Informe a data</mat-label>
+                <mat-date-range-input [rangePicker]="picker">
+                  <input matStartDate placeholder="Inicio" matInput [(ngModel)]="tarefa.dataInicio" name="dataInicio">
+                  <input matEndDate placeholder="Fim" matInput [(ngModel)]="tarefa.dataTermino" name="dataTermino">
+                </mat-date-range-input>
+                <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-date-range-picker #picker></mat-date-range-picker>
+              </mat-form-field>
+
+              <button mat-button (click)="criarTarefa()" color="primary">Criar</button>
+              <button mat-button color="accent">Cancelar</button>
+            
+            </form>
+    </mat-card>
+   
+</div>
