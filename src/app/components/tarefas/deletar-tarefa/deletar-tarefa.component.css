@@ -6,3 +6,15 @@
     justify-content: center;
     align-items: center;    
   }
+
+.container{
+  width: 35rem;
+    border-radius: 1rem;
+    margin: auto;
+    padding: 1rem 1rem 3rem 1rem;
+}
+
+.botao{
+  color: rgb(244, 100, 29);
+  background: white;
+}

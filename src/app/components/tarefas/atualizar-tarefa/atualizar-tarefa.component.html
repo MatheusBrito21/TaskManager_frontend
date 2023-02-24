@@ -34,8 +34,8 @@
                 <mat-radio-button (click)="setStatus('FECHADA')">Fechada</mat-radio-button>
               </mat-radio-group>
             
-              <button mat-button (click)="update()"[disabled]="!validaCampos()" color="primary">Atualizar</button>
-              <button mat-button routerLink="../../" color="accent">Cancelar</button>
+              <button mat-button class="botao" (click)="update()"[disabled]="!validaCampos()">Atualizar</button>
+              <button mat-button class="botao" routerLink="../../">Cancelar</button>
             
             </form>
     </mat-card>

@@ -2,7 +2,6 @@
     <mat-card class="conteudo">
         <mat-card-content></mat-card-content>
         <form class="form-create">
-            <h1>Criar nova tarefa</h1>
             <mat-form-field appearance="fill">
                 <mat-label>Titulo</mat-label>
                 <input matInput [(ngModel)]="tarefa.titulo" name="titulo" [formControl] = "titulo" required>
@@ -29,8 +28,8 @@
                 <mat-date-range-picker #picker></mat-date-range-picker>
               </mat-form-field>
 
-              <button mat-button (click)="criarTarefa()"[disabled]="!validaCampos()" color="primary">Criar</button>
-              <button mat-button color="accent">Cancelar</button>
+              <button class="botao" mat-button (click)="criarTarefa()"[disabled]="!validaCampos()">Criar</button>
+              <button class="botao" mat-button >Cancelar</button>
             
             </form>
     </mat-card>

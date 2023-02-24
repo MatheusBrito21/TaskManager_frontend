@@ -1,5 +1,20 @@
 .conteudo-tarefas{
     margin-top: 5px;
+    border: 5px;
     justify-content: center;
     align-items: center;
+}
+
+.card-botoes{
+    margin: 5px;
+    border: 5px;
+    color: white;
+    background: linear-gradient(86deg, rgb(244, 100, 29) 0%, rgb(247, 95, 39) 9%, rgb(255, 38, 0) 100%);
+}
+
+.top-button{
+    margin: 5px;
+    border: 5px;
+    color: rgb(244, 100, 29);
+    background: white;
 }
