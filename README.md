@@ -1,27 +1,61 @@
-# Taskmanager
+# TaskManager
+Esta é uma API Rest para gerencimaneto de tarefas, criada utilizando Java e Spring Boot.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+<h3>Tecnicas e ferramentas utilizadas:</h3>
+<p>Maven<br>
+JPA;<br>
+Hibernate;<br>
+Injenção de Dependências;<br>
+Banco de dados Relacional(Mysql e H2);<br>
+Objeto de Transferência de dados - DTOs;<br>
+Exception Handler e Exceções personalizadas;<br>
+Angular para front-end:</p>
 
-## Development server
+<h2>Como utilizar</h2>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para executar o projeto é preciso instalar o node.js em sua máquina e configurá-lo nas variáveis de ambiente<br>
+  
+![alt text](src/assets/images/nodePath.JPG)
 
-## Code scaffolding
+![alt text](src/assets/images/variaveisPath.JPG)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![alt text](src/assets/images/path.JPG)
 
-## Build
+![alt text](src/assets/images/pathvariavel.JPG)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<h1>Importando o projeto no VsCode</h1>
 
-## Running unit tests
+Crie uma nova pasta e realize o git clone do repositorio.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![alt text](src/assets/images/imprtandoProjeto.JPG)
 
-## Running end-to-end tests
+Abra o projeto no vsCode e selecioine a pasta principal
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![alt text](src/assets/images/pastaProjeto.JPG)
 
-## Further help
+Execute o comando <b>npm install -g @angular/cli</b> para instalar o Angular.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![alt text](src/assets/images/installAngular.JPG)
+
+Execute o comando <b>npm install</b> para baixar os modulos do projeto.
+
+![alt text](src/assets/images/npmInstall.JPG)
+
+Execute o comando <b>ng serve</b> para iniciar o projeto.
+
+![alt text](src/assets/images/ngServe.JPG)
+
+Acesse <b>http://localhost:4200</b> no navegador para utilizar a aplicação.
+
+![alt text](src/assets/images/localHost4200.JPG)
+
+**OBS: Não esqueça de executar a aplicação no back end para ter acesso as informações do banco de dados.
+
+<b>link repositorio backend: https://github.com/MatheusBrito21/TaskManager_backend</b>
+
+
+
+
+
+  
+
