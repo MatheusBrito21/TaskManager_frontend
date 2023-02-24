@@ -5,7 +5,7 @@
             <h1>Criar nova tarefa</h1>
             <mat-form-field appearance="fill">
                 <mat-label>Titulo</mat-label>
-                <input matInput [(ngModel)]="tarefa.titulo" name="titulo">
+                <input matInput [(ngModel)]="tarefa.titulo" name="titulo" [formControl] = "titulo" required>
               </mat-form-field>
               <mat-form-field appearance="fill">
                 <mat-label>Descrição</mat-label>
@@ -14,8 +14,15 @@
               <mat-form-field appearance="fill">
                 <mat-label>Informe a data</mat-label>
                 <mat-date-range-input [rangePicker]="picker">
-                  <input matStartDate placeholder="Inicio" matInput [(ngModel)]="tarefa.dataInicio" name="dataInicio">
-                  <input matEndDate placeholder="Fim" matInput [(ngModel)]="tarefa.dataTermino" name="dataTermino">
+                  <input 
+                  matStartDate placeholder="Inicio" 
+                  matInput [(ngModel)]="tarefa.dataInicio" 
+                  name="dataInicio"
+                  [formControl] = "dataInicio" required>
+                  <input matEndDate placeholder="Fim" 
+                  matInput [(ngModel)]="tarefa.dataTermino" 
+                  name="dataTermino"
+                  [formControl] = "dataTermino" required>
                 </mat-date-range-input>
                 <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
