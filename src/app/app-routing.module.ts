@@ -22,7 +22,11 @@ const routes: Routes = [
       {path:'todas/update/:id',component:AtualizarTarefaComponent},
       {path:'todas/delete/:id',component:DeletarTarefaComponent},
       {path:'fechadas/update/:id',component:AtualizarTarefaComponent},
+      {path:'fechadas/update/:id',component:AtualizarTarefaComponent},
+      {path:'fechadas/delete/:id',component:DeletarTarefaComponent},
       {path:'abertas/update/:id',component:AtualizarTarefaComponent},
+      {path:'abertas/update/:id',component:AtualizarTarefaComponent},
+      {path:'abertas/delete/:id',component:DeletarTarefaComponent},
     ]},
     {path:'progresso', component:ProgressoComponent}
 
