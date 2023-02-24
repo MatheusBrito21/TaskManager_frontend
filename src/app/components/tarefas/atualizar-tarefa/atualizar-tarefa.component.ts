@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Tarefa } from 'src/app/models/tarefa-model';
 import { TarefaService } from 'src/app/services/tarefa.service';
 
@@ -20,7 +21,11 @@ export class AtualizarTarefaComponent {
     status:'ABERTA'
   }
 
-  constructor(private service:TarefaService,private route: ActivatedRoute){}
+  constructor(
+    private service:TarefaService,
+    private route: ActivatedRoute,
+    private toast: ToastrService,
+    private router: Router){}
 
   ngOnInit():void{
     this.tarefa.id = this.route.snapshot.paramMap.get('id')
@@ -44,7 +49,8 @@ export class AtualizarTarefaComponent {
   update():void{
     this.service.update(this.tarefa).subscribe(resposta=>{
       this.tarefa = resposta
-      console.log('Tarefa encontrada!')
+      this.toast.success('Tarefa atualizada com sucesso!','Atualização');
+      this.router.navigate(['tarefas/todas'])
     })
   }
 

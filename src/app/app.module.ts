@@ -32,6 +32,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { AtualizarTarefaComponent } from './components/tarefas/atualizar-tarefa/atualizar-tarefa.component';
 import { DeletarTarefaComponent } from './components/tarefas/deletar-tarefa/deletar-tarefa.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { ToastrModule } from 'ngx-toastr';
+
  
 
 
@@ -71,6 +73,12 @@ import {MatRadioModule} from '@angular/material/radio';
     MatDatepickerModule,
     MatNativeDateModule,
     MatRadioModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar:true
+    })
+
 
     
   ],
